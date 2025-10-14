@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <style>
+    /* Zero chrome */
+    html,body { height:100%; margin:0; background:#fff; }
+    /* Two panels only */
+    .wrap {
+      display:grid;
+      grid-template-rows: 1fr 1fr;
+      height:100vh;
+    }
+    @media (min-width: 900px) {
+      .wrap { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+    }
+    /* Each panel fills, no borders/scrollbars unless needed */
+    .panel {
+      position:relative; overflow:auto; min-height:0; min-width:0;
+    }
+    /* Embedded content fills panel */
+    .panel > iframe,
+    .panel > object,
+    .panel > img {
+      position:absolute; inset:0; width:100%; height:100%; border:0; display:block; object-fit:contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- PANEL 1: Use ONE of the three options inside this div -->
+
+    <div class="panel">
+      <!-- Option A: PDF -->
+      <object data="first.pdf" type="application/pdf"></object>
+
+      <!-- Option B: Image (JPEG/PNG/SVG). If you use this, remove the <object> above. -->
+      <!-- <img src="first.jpg" alt=""> -->
+
+      <!-- Option C: PDF via iframe (some Android browsers) -->
+      <!-- <iframe src="first.pdf"></iframe> -->
+    </div>
+
+    <!-- PANEL 2: Use ONE of the three options inside this div -->
+
+    <div class="panel">
+      <!-- Option A: PDF -->
+      <object data="second.pdf" type="application/pdf"></object>
+
+      <!-- Option B: Image -->
+      <!-- <img src="second.png" alt=""> -->
+
+      <!-- Option C: PDF via iframe -->
+      <!-- <iframe src="second.pdf"></iframe> -->
+    </div>
+  </div>
+</body>
+</html>
