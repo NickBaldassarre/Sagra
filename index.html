@@ -4,16 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#831413">
-  <meta name="description" content="VIᵃ SAGRA DI TORONTO. COLUMBUS CENTRE. 25 OTTOBRE. NOON START, RAIN OR SHINE, NO TICKETS REQUIRED.">
+  <meta name="description" content="VIᴬ SAGRA DI TORONTO. COLUMBUS CENTRE. 25 OTTOBRE. NOON START, RAIN OR SHINE, NO TICKETS REQUIRED.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="VIᵃ SAGRA DI TORONTO — 25 OTTOBRE">
+  <meta property="og:title" content="VIᴬ SAGRA DI TORONTO — 25 OTTOBRE">
   <meta property="og:description" content="COLUMBUS CENTRE. NOON START, RAIN OR SHINE, NO TICKETS REQUIRED.">
   <meta property="og:url" content="https://www.sagraditoronto.com/">
-  <meta property="og:image" content="https://www.sagraditoronto.com/assets/sagra-2026-poster.png">
-  <meta property="og:image:alt" content="VIᵃ SAGRA DI TORONTO">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://www.sagraditoronto.com/">
-  <title>VIᵃ SAGRA DI TORONTO — 25 OTTOBRE</title>
+  <title>VIᴬ SAGRA DI TORONTO — 25 OTTOBRE</title>
   <style>
     @font-face {
       font-family: "Bowlby One SC";
@@ -52,23 +50,26 @@
       line-height: 1.3;
     }
     main {
-      width: min(100%, 78rem);
+      width: min(100%, 48rem);
       margin-inline: auto;
       padding: clamp(0.75rem, 3vw, 2.5rem);
     }
     .event {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      align-items: start;
-      gap: clamp(1.5rem, 4vw, 3rem);
+      display: block;
     }
-    .poster { display: block; width: 100%; height: auto; }
-    .copy { min-width: 0; padding-top: 0.5rem; }
+    .copy { min-width: 0; }
     h1 {
       margin: 0 0 0.8rem;
       font-size: clamp(1.6rem, 3.2vw, 2.5rem);
       font-weight: 900;
       line-height: 1;
+    }
+    h1 sup {
+      position: relative;
+      top: -0.1em;
+      font-size: 0.48em;
+      line-height: 0;
+      vertical-align: super;
     }
     .venue, .date, .benefit {
       background: var(--gold);
@@ -107,7 +108,7 @@
     .credits ul { margin: 0; padding: 0; list-style: none; font-size: 1.2rem; font-weight: 900; }
     @media (max-width: 48rem) {
       main { max-width: 38rem; }
-      .event, .credits { grid-template-columns: 1fr; }
+      .credits { grid-template-columns: 1fr; }
       .copy { padding: 0.25rem 0.35rem; }
       .credits { margin-inline: 0.35rem; }
     }
@@ -117,10 +118,8 @@
   <main>
     <article aria-labelledby="event-title">
       <div class="event">
-        <!-- The screenshot's poster is reproduced here; its complete text follows in HTML. -->
-        <img class="poster" src="assets/sagra-2026-poster.png" width="555" height="745" alt="">
         <div class="copy">
-          <h1 id="event-title" lang="it">VIᵃ SAGRA DI TORONTO</h1>
+          <h1 id="event-title" lang="it">VI<sup>A</sup> SAGRA DI TORONTO</h1>
           <p class="venue">COLUMBUS CENTRE</p>
           <p class="date"><time datetime="2026-10-25" lang="it">25 OTTOBRE</time></p>
           <p class="essentials">NOON START, RAIN OR SHINE, NO TICKETS REQUIRED</p>
