@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#831413">
   <meta name="description" content="VIᴬ SAGRA DI TORONTO. COLUMBUS CENTRE. 25 OTTOBRE. NOON START, RAIN OR SHINE, NO TICKETS REQUIRED.">
   <meta property="og:type" content="website">
@@ -131,7 +131,10 @@
       }
     }
     @media (max-width: 48rem) {
-      main { max-width: 38rem; }
+      main {
+        max-width: 38rem;
+        padding-bottom: calc(8rem + env(safe-area-inset-bottom, 0px));
+      }
       .credits { grid-template-columns: 1fr; }
       .copy { padding: 0.25rem 0.35rem; }
       .credits { margin-inline: 0.35rem; }
