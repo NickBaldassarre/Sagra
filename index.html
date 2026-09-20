@@ -115,17 +115,21 @@
       border: 3px solid var(--gold);
       border-radius: 0.8rem;
       color: var(--gold);
-      transition: color 150ms ease, background-color 150ms ease;
-    }
-    .instagram:hover {
-      color: var(--red);
-      background: var(--gold);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgb(241 168 29 / 25%);
     }
     .instagram:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 5px;
     }
     .instagram svg { width: 2rem; height: 2rem; }
+    @media (hover: hover) and (pointer: fine) {
+      .instagram { transition: color 150ms ease, background-color 150ms ease; }
+      .instagram:hover {
+        color: var(--red);
+        background: var(--gold);
+      }
+    }
     @media (max-width: 48rem) {
       main { max-width: 38rem; }
       .credits { grid-template-columns: 1fr; }
