@@ -106,6 +106,26 @@
     }
     .credits h2 { margin: 0 0 0.4rem; font-size: 1.1rem; font-weight: 700; }
     .credits ul { margin: 0; padding: 0; list-style: none; font-size: 1.2rem; font-weight: 900; }
+    .instagram {
+      display: grid;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: 2rem auto 0;
+      place-items: center;
+      border: 3px solid var(--gold);
+      border-radius: 0.8rem;
+      color: var(--gold);
+      transition: color 150ms ease, background-color 150ms ease;
+    }
+    .instagram:hover {
+      color: var(--red);
+      background: var(--gold);
+    }
+    .instagram:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 5px;
+    }
+    .instagram svg { width: 2rem; height: 2rem; }
     @media (max-width: 48rem) {
       main { max-width: 38rem; }
       .credits { grid-template-columns: 1fr; }
@@ -152,6 +172,13 @@
           </ul>
         </section>
       </div>
+      <a class="instagram" href="https://www.instagram.com/sagra_di_toronto/" aria-label="Sagra di Toronto on Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="12" cy="12" r="4.25" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="17.6" cy="6.5" r="1.35" fill="currentColor"/>
+        </svg>
+      </a>
     </article>
   </main>
 </body>
