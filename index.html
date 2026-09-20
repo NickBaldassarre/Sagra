@@ -53,6 +53,7 @@
       width: min(100%, 48rem);
       margin-inline: auto;
       padding: clamp(0.75rem, 3vw, 2.5rem);
+      text-align: center;
     }
     .event {
       display: block;
@@ -60,9 +61,9 @@
     .copy { min-width: 0; }
     h1 {
       margin: 0 0 0.8rem;
-      font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+      font-size: clamp(3rem, 7vw, 5rem);
       font-weight: 900;
-      line-height: 1;
+      line-height: 0.95;
     }
     h1 sup {
       position: relative;
@@ -77,11 +78,14 @@
       padding: 0.35rem 0.65rem 0.5rem;
       font-weight: 900;
     }
-    .venue, .date { font-family: "Bowlby One SC", "Arial Black", sans-serif; font-weight: 400; }
-    .venue { margin: 0 0 1rem; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1; }
+    .venue, .date {
+      font-family: "Bowlby One SC", "Arial Black", sans-serif;
+      font-size: clamp(2rem, 3.9vw, 3.2rem);
+      font-weight: 400;
+    }
+    .venue { margin: 0 0 1rem; line-height: 1; }
     .date {
       margin: 0;
-      font-size: clamp(2rem, 3.9vw, 3.2rem);
       line-height: 1;
       letter-spacing: -0.02em;
     }
@@ -156,7 +160,7 @@
       </div>
       <div class="credits">
         <section aria-labelledby="presenters">
-          <h2 id="presenters" lang="it">vna presentazione di</h2>
+          <h2 id="presenters" lang="it">una presentazione di</h2>
           <ul>
             <li>EDGE FOOD EQUIPMENT</li>
             <li>AURORA IMPORTING</li>
