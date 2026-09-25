@@ -3,127 +3,185 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#831413">
-  <meta name="description" content="VIᴬ SAGRA DI TORONTO. COLUMBUS CENTRE. 25 OTTOBRE. NOON START, RAIN OR SHINE, NO TICKETS REQUIRED.">
+  <meta name="theme-color" content="#9d0801">
+  <meta name="description" content="VIa SAGRA DI TORONTO. SUNDAY OCTOBER 25. THE COLUMBUS CENTRE. Kitchen 12–6PM. Bar 12–8PM. rain or shine, no tickets required, order at the door">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="VIᴬ SAGRA DI TORONTO — 25 OTTOBRE">
-  <meta property="og:description" content="COLUMBUS CENTRE. NOON START, RAIN OR SHINE, NO TICKETS REQUIRED.">
+  <meta property="og:title" content="VIa SAGRA DI TORONTO — SUNDAY OCTOBER 25">
+  <meta property="og:description" content="THE COLUMBUS CENTRE. Kitchen 12–6PM. Bar 12–8PM. rain or shine, no tickets required, order at the door">
   <meta property="og:url" content="https://www.sagraditoronto.com/">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://www.sagraditoronto.com/">
-  <title>VIᴬ SAGRA DI TORONTO — 25 OTTOBRE</title>
+  <link rel="preload" href="assets/fonts/sagra-poster-wordmark.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/anton-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <title>VIa SAGRA DI TORONTO — SUNDAY OCTOBER 25</title>
   <style>
     @font-face {
-      font-family: "Bowlby One SC";
-      src: url("assets/fonts/bowlby-one-sc.ttf") format("truetype");
+      font-family: "Sagra Poster Wordmark";
+      src: url("assets/fonts/sagra-poster-wordmark.ttf") format("truetype");
       font-style: normal;
       font-weight: 400;
       font-display: swap;
     }
     @font-face {
-      font-family: "Barlow Condensed";
-      src: url("assets/fonts/barlow-condensed-bold.ttf") format("truetype");
+      font-family: "Sagra Poster Display";
+      src: url("assets/fonts/sagra-poster-display.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Anton";
+      src: url("assets/fonts/anton-regular.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Barlow";
+      src: url("assets/fonts/barlow-bold.ttf") format("truetype");
       font-style: normal;
       font-weight: 700;
       font-display: swap;
     }
-    @font-face {
-      font-family: "Barlow Condensed";
-      src: url("assets/fonts/barlow-condensed-black.ttf") format("truetype");
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-    }
     :root {
       color-scheme: dark;
-      --red: #831413;
-      --dark-red: #3f0e0f;
-      --gold: #f1a81d;
+      --red: #9d0801;
+      --yellow: #ff9000;
     }
     *, *::before, *::after { box-sizing: border-box; }
     body {
       margin: 0;
       background: var(--red);
-      color: var(--gold);
-      font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
-      font-weight: 700;
+      color: var(--yellow);
+      font-family: "Anton", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      font-synthesis: none;
       line-height: 1.3;
     }
     main {
-      width: min(100%, 48rem);
+      width: min(100%, 85.4375rem);
       margin-inline: auto;
-      padding: clamp(0.75rem, 3vw, 2.5rem);
+      padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .poster {
+      container-type: inline-size;
       text-align: center;
     }
-    .event {
+    header { padding-top: 3.88cqw; }
+    p, h1, h2, ul { margin: 0; }
+    h1, h2 { font-weight: inherit; }
+    .invitation, .tagline {
+      font-family: "Barlow", Arial, sans-serif;
+      font-size: 2.34cqw;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .invitation { transform: translateY(0.2cqw) scaleX(0.87); }
+    .wordmark {
+      margin: 1.3cqw auto 0;
+      font-family: "Sagra Poster Wordmark", sans-serif;
+      font-size: 8.5cqw;
+      font-kerning: normal;
+      font-variant-ligatures: contextual;
+      line-height: 1.11;
+      white-space: nowrap;
+      transform: translateY(0.45cqw);
+    }
+    .tagline {
+      margin-top: 1.8cqw;
+      transform: translateX(-0.6cqw) scaleX(0.918);
+    }
+    .tagline span { display: block; }
+    .date-panel {
+      width: 75.6%;
+      margin: 1.35cqw auto 0;
+      padding: 1.6cqw 1cqw 1.85cqw;
+      background: var(--yellow);
+      color: var(--red);
+    }
+    .date-panel time, .venue {
       display: block;
-    }
-    .copy { min-width: 0; }
-    h1 {
-      margin: 0 0 0.8rem;
-      font-size: clamp(3rem, 7vw, 5rem);
-      font-weight: 900;
-      line-height: 0.95;
-    }
-    h1 sup {
-      position: relative;
-      top: -0.1em;
-      font-size: 0.48em;
-      line-height: 0;
-      vertical-align: super;
-    }
-    .venue, .date, .benefit {
-      background: var(--gold);
-      color: var(--dark-red);
-      padding: 0.35rem 0.65rem 0.5rem;
-      font-weight: 900;
-    }
-    .venue, .date {
-      font-family: "Bowlby One SC", "Arial Black", sans-serif;
-      font-size: clamp(2rem, 3.9vw, 3.2rem);
-      font-weight: 400;
-    }
-    .venue { margin: 0 0 1rem; line-height: 1; }
-    .date {
-      margin: 0;
+      font-family: "Sagra Poster Display", sans-serif;
+      font-kerning: normal;
       line-height: 1;
-      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+    .date-panel time { font-size: 5.87cqw; }
+    .venue {
+      margin-top: 1.23cqw;
+      font-size: 5.1cqw;
     }
     .essentials {
-      margin: 0.85rem 0 1.5rem;
-      font: italic 800 1rem/1.5 Arial, sans-serif;
+      margin: 2.4cqw auto 0;
+      font-size: 2.34cqw;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
     }
-    .menu {
-      margin: 0;
-      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-      font-weight: 900;
-      line-height: 1.35;
-    }
-    .benefit { margin: 1.5rem 0 0; font-size: clamp(1.2rem, 2.5vw, 1.6rem); line-height: 1.2; }
-    .credits {
+    .programme {
+      --column-inset: 0.5cqw;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem 3rem;
-      margin-top: 2rem;
-      padding-top: 1.25rem;
-      border-top: 3px solid var(--gold);
+      grid-template-columns: minmax(0, 45.3fr) minmax(0, 32.7fr) minmax(0, 22fr);
+      width: 70%;
+      margin: 2.3cqw auto 0;
+      text-align: left;
     }
-    .credits h2 { margin: 0 0 0.4rem; font-size: 1.1rem; font-weight: 700; }
-    .credits ul { margin: 0; padding: 0; list-style: none; font-size: 1.2rem; font-weight: 900; }
+    .section-heading {
+      width: 15.4cqw;
+      max-width: 100%;
+      min-height: 2.9cqw;
+      padding: 0.2cqw var(--column-inset);
+      background: var(--yellow);
+      color: var(--red);
+      font-size: 2.05cqw;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.65em;
+      white-space: nowrap;
+    }
+    .items, .entertainment ul {
+      padding: 0 0 0 var(--column-inset);
+      list-style: none;
+      font-size: 2.195cqw;
+      line-height: 1.28;
+    }
+    .items li, .entertainment li {
+      transform: scaleY(0.88);
+      transform-origin: center;
+    }
+    .credits {
+      width: 84%;
+      margin: 7.8cqw auto 0;
+      font-size: 2.34cqw;
+      line-height: 1.32;
+    }
+    .credits section + section { margin-top: 3.15cqw; }
+    .credits section:last-child { margin-top: 2.55cqw; }
+    .credits h2 {
+      display: table;
+      margin: 0 auto;
+      padding: 0.07cqw 0.95cqw;
+      background: var(--yellow);
+      color: var(--red);
+      font: inherit;
+    }
+    .credits p { margin-top: 0.1cqw; }
+    .credit-line { display: block; }
     .instagram {
       display: grid;
       width: 3.5rem;
       height: 3.5rem;
-      margin: 2rem auto 0;
+      margin: clamp(2rem, 5cqw, 4.5rem) auto 0;
       place-items: center;
-      border: 3px solid var(--gold);
+      border: 3px solid var(--yellow);
       border-radius: 0.8rem;
-      color: var(--gold);
+      color: var(--yellow);
       touch-action: manipulation;
-      -webkit-tap-highlight-color: rgb(241 168 29 / 25%);
+      -webkit-tap-highlight-color: rgb(255 144 0 / 25%);
     }
     .instagram:focus-visible {
-      outline: 3px solid var(--gold);
+      outline: 3px solid var(--yellow);
       outline-offset: 5px;
     }
     .instagram svg { width: 2rem; height: 2rem; }
@@ -131,58 +189,118 @@
       .instagram { transition: color 150ms ease, background-color 150ms ease; }
       .instagram:hover {
         color: var(--red);
-        background: var(--gold);
+        background: var(--yellow);
       }
     }
     @media (max-width: 48rem) {
-      main {
-        max-width: 38rem;
-        padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+      header { padding-top: 1.5rem; }
+      .invitation, .tagline { font-size: clamp(0.875rem, 2.8cqw, 1.375rem); }
+      .wordmark { margin-top: 0.75rem; }
+      .tagline { margin-top: 1rem; }
+      .date-panel {
+        width: 92%;
+        margin-top: 1rem;
+        padding: 0.75rem 1cqw 0.85rem;
       }
-      .credits { grid-template-columns: 1fr; }
-      .copy { padding: 0.25rem 0.35rem; }
-      .credits { margin-inline: 0.35rem; }
+      .date-panel time { font-size: 7.1cqw; }
+      .venue { font-size: 6.2cqw; }
+      .essentials {
+        width: 90%;
+        margin-top: 1rem;
+        font-size: clamp(0.875rem, 2.6cqw, 1.25rem);
+        text-wrap: balance;
+      }
+      .programme {
+        --column-inset: 0.35rem;
+        width: 90%;
+        grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+        gap: 1.5rem 1.25rem;
+        margin-top: 1.5rem;
+      }
+      .kitchen { grid-row: span 2; }
+      .section-heading {
+        width: 100%;
+        padding: 0.3rem var(--column-inset);
+        font-size: clamp(0.875rem, 2.9cqw, 1.375rem);
+        flex-wrap: wrap;
+        gap: 0 0.5em;
+      }
+      .items, .entertainment ul {
+        font-size: clamp(1rem, 2.9cqw, 1.375rem);
+        line-height: 1.4;
+      }
+      .items li, .entertainment li { transform: none; }
+      .credits { width: 90%; margin-top: 2.75rem; font-size: clamp(1rem, 2.6cqw, 1.25rem); }
+      .credits section + section, .credits section:last-child { margin-top: 1.75rem; }
+      .credits h2 { padding: 0.25rem 0.6rem; }
+      .credits p { margin-top: 0.35rem; }
+      .credit-line { display: inline; }
     }
   </style>
 </head>
 <body>
   <main>
-    <article aria-labelledby="event-title">
-      <div class="event">
-        <div class="copy">
-          <h1 id="event-title" lang="it">VI<sup>A</sup> SAGRA DI TORONTO</h1>
-          <p class="venue">COLUMBUS CENTRE</p>
-          <p class="date"><time datetime="2026-10-25" lang="it">25 OTTOBRE</time></p>
-          <p class="essentials">NOON START, RAIN OR SHINE, NO TICKETS REQUIRED</p>
-          <p class="menu" lang="it">TORTELLI DI ZUCCA, MACCHERONI AL RAGÙ D’ANATRA, TRIPPA, STRACOTTO E POLENTA, SALAMINE ALLE BRACE, ANTIPASTI, VINO, DOLCE, CAFFÈ, MUSICA DAL VIVO, E DIVERTIMENTO PER TUTTA LA FAMIGLIA!</p>
-          <p class="benefit" lang="it">TUTTO PER <span lang="en">ALBION NEIGHBOURHOOD SERVICES</span></p>
+    <article class="poster" aria-labelledby="event-title">
+      <header>
+        <p class="invitation" lang="it">VENITE TUTTI A LA</p>
+        <h1 class="wordmark" id="event-title" lang="it">VIa SAGRA DI TORONTO</h1>
+        <p class="tagline" lang="it"><span>LA NUOVA FESTA TORONTONIANA</span> <span>DEL RACCOLTO AUTUNNALE</span></p>
+        <div class="date-panel">
+          <time datetime="2026-10-25">SUNDAY OCTOBER 25</time>
+          <p class="venue">THE COLUMBUS CENTRE</p>
         </div>
-      </div>
-      <div class="credits">
-        <section aria-labelledby="presenters">
-          <h2 id="presenters" lang="it">una presentazione di</h2>
-          <ul>
-            <li>EDGE FOOD EQUIPMENT</li>
-            <li>AURORA IMPORTING</li>
-            <li>BONDI PRODUCE</li>
-            <li>THE BUTCHER SHOPPE</li>
-            <li>STELLA ARTOIS</li>
-            <li>SAN PELLEGRINO</li>
+        <p class="essentials">RAIN OR SHINE, NO TICKETS REQUIRED, ORDER AT THE DOOR</p>
+      </header>
+      <div class="programme">
+        <section class="kitchen" aria-labelledby="kitchen-title">
+          <h2 class="section-heading" id="kitchen-title"><span>KITCHEN</span> <span>12-6PM</span></h2>
+          <ul class="items" lang="it">
+            <li>TORTELLI DI ZUCCA</li>
+            <li>MACCHERONI AL RAGÙ D’ANATRA</li>
+            <li>SALUMI, MOZZARELLE E FOCACCE</li>
+            <li>STRACOTTO O FUNGHI E POLENTA</li>
+            <li>TRIPPA AL POMODORO</li>
+            <li>FASULIN DE L’OC CUN LE CUDEGHE</li>
+            <li>SALAMINE ALLE BRACE</li>
           </ul>
+        </section>
+        <section class="bar" aria-labelledby="bar-title">
+          <h2 class="section-heading" id="bar-title"><span>BAR</span> <span>12-8PM</span></h2>
+          <ul class="items" lang="it">
+            <li>LAMBRUSCO</li>
+            <li>BIRRA</li>
+            <li>BIBITE</li>
+            <li>CAFFÈ</li>
+            <li>AMARI</li>
+            <li>GELATO</li>
+            <li>DOLCI</li>
+          </ul>
+        </section>
+        <section class="entertainment" aria-labelledby="entertainment-title">
+          <h2 class="section-heading" id="entertainment-title"><span>ENTERTAINMENT</span></h2>
+          <ul>
+            <li>GAMES AND FUN</li>
+            <li>LIVE MUSIC BY</li>
+            <li>TREVOR GIANCOLA</li>
+            <li>FRANK MOYO</li>
+            <li>BIG DINNER</li>
+          </ul>
+        </section>
+      </div>
+      <footer class="credits">
+        <section aria-labelledby="presenters">
+          <h2 id="presenters">BROUGHT TO YOU BY</h2>
+          <p><span class="credit-line">BONDI PRODUCE, THE BUTCHER SHOPPE, AURORA IMPORTING,</span> <span class="credit-line">EDGE FOOD EQUIPMENT, STELLA ARTOIS, SAN PELLEGRINO</span></p>
         </section>
         <section aria-labelledby="producers">
-          <h2 id="producers" lang="it">prodotto da</h2>
-          <ul>
-            <li>FAMIGLIA BALDASSARRE</li>
-            <li>TORONTO VARIETY SHOW</li>
-            <li>MAJOR LEAGUE CATERING</li>
-            <li>SUGO</li>
-            <li>UBUNTU</li>
-            <li>TRE MARI BAKERY</li>
-            <li>THE COLUMBUS CENTRE</li>
-          </ul>
+          <h2 id="producers">PRODUCED BY</h2>
+          <p><span class="credit-line">FAMIGLIA BALDASSARRE, MAJORLEAGUE CATERING, SUGO, UBUNTU,</span> <span class="credit-line">THE TORONTO VARIETY SHOW, TRE MARI BAKERY, VILLA CHARITIES</span></p>
         </section>
-      </div>
+        <section aria-labelledby="friends">
+          <h2 id="friends">WITH OUR FRIENDS</h2>
+          <p><span class="credit-line">MATTACCHIONI, PIANO PIANO, PIZZERIA BADIALI, DRINKS FARM, RUFINO, TWENTY VICTORIA,</span> <span class="credit-line">CRAVING CURATOR, PENELOPE, HAWTHORN ORGANIC SEED FARM, MATTYTHEBUTCHER,</span> <span class="credit-line">TWO FACES, INTERNATIONAL CHEESE, SECURETRUST, MAWG, TONY CHEESE, BAITSHOP,</span> <span class="credit-line">TRISTONE, MICKEY LIMBOS, IL TAGLIERE AND MANY MORE</span></p>
+        </section>
+      </footer>
       <a class="instagram" href="https://www.instagram.com/sagra_di_toronto/" aria-label="Sagra di Toronto on Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <rect x="2.5" y="2.5" width="19" height="19" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
