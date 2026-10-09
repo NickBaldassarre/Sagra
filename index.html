@@ -157,7 +157,7 @@
       line-height: 1.32;
     }
     .credits section + section { margin-top: 3.15cqw; }
-    .credits section:last-child { margin-top: 2.55cqw; }
+    .credits section[aria-labelledby="friends"], .credits section:last-child { margin-top: 2.55cqw; }
     .credits h2 {
       display: table;
       margin: 0 auto;
@@ -167,6 +167,15 @@
       font: inherit;
     }
     .credits p { margin-top: 0.1cqw; }
+    .credits a {
+      color: inherit;
+      text-decoration-thickness: 0.05em;
+      text-underline-offset: 0.12em;
+    }
+    .credits a:focus-visible {
+      outline: 2px solid var(--yellow);
+      outline-offset: 4px;
+    }
     .credit-line { display: block; }
     #friends + p { text-wrap: balance; }
     .instagram {
@@ -232,7 +241,7 @@
       }
       .items li, .entertainment li { transform: none; }
       .credits { width: 90%; margin-top: 2.75rem; font-size: clamp(1rem, 2.6cqw, 1.25rem); }
-      .credits section + section, .credits section:last-child { margin-top: 1.75rem; }
+      .credits section + section, .credits section[aria-labelledby="friends"], .credits section:last-child { margin-top: 1.75rem; }
       .credits h2 { padding: 0.25rem 0.6rem; }
       .credits p { margin-top: 0.35rem; }
       .credit-line { display: inline; }
@@ -295,11 +304,15 @@
         </section>
         <section aria-labelledby="producers">
           <h2 id="producers">PRODUCED BY</h2>
-          <p><span class="credit-line">FAMIGLIA BALDASSARRE, MAJOR LEAGUE CATERING, SUGO, UBUNTU,</span> <span class="credit-line">THE TORONTO VARIETY SHOW, TRE MARI BAKERY, VILLA CHARITIES</span></p>
+          <p><span class="credit-line">FAMIGLIA BALDASSARRE, MAJOR LEAGUE CATERING, SUGO, UBUNTU,</span> <span class="credit-line">THE TORONTO VARIETY SHOW, TRE MARI BAKERY, VILLA CHARITIES, ABSOLUTE XM</span></p>
         </section>
         <section aria-labelledby="friends">
           <h2 id="friends">WITH OUR FRIENDS</h2>
-          <p>ANDREW PICCININ, ANDREW YOUNGSON, ATOMIC BURGER, BAITSHOP, BRODFLOUR, CRAVING CURATOR, CRU WINE MERCHANTS, DRINKS FARM, EQUA HOUSE, GIUSEPPE SANSONE, HAWTHORN ORGANIC SEED FARM, INTERNATIONAL CHEESE, JAMIL'S, JORDAN GOOCH, MATTACHIONI, MATTYTHEBUTCHER, MAWG, MICKEY LIMBOS, NIC MACRI, THE NINEFIVE DESIGN, PENELOPE, PIANO PIANO, PIZZERIA BADIALI, RUFINO, SECURETRUST, SOFIA ANDRADE, IL TAGLIERE, TONY CHEESE, TRISTONE, TWENTY VICTORIA, TWO FACES AND MANY MORE</p>
+          <p>MATTACHIONI, TWENTY VICTORIA, PIANO PIANO, DRINKS FARM, TONY CHEESE, RUFINO, BAR AMARO, HAWTHORN ORGANIC SEED FARM, INTERNATIONAL CHEESE, THE NINEFIVE DESIGN, MATTYTHEBUTCHER, TRISTONE MEDIA, ADRIAN BALDASSARRE, AMELIA GIANNETTA, ANDREW PICCININ, ANDREW YOUNGSON, ATOMIC BURGER, BAITSHOP, BRODFLOUR, CHEFS WAREHOUSE, CRAVING CURATOR, CRU WINE MERCHANTS, EQUA HOUSE, GIUSEPPE SANSONE, JAMIL'S, JORDAN GOOCH, MAWG, NIC MACRI, PENELOPE RESTAURANT, SECURETRUST, SOFIA ANDRADE, IL TAGLIERE, TWO FACES AND MANY MORE</p>
+        </section>
+        <section aria-labelledby="beneficiaries">
+          <h2 id="beneficiaries">ALL PROCEEDS FOR</h2>
+          <p><a href="https://www.albionneighbourhoodservices.ca">BGC ALBION</a> AND <a href="https://www.villacharities.com/">VILLA CHARITIES</a></p>
         </section>
       </footer>
       <a class="instagram" href="https://www.instagram.com/sagra_di_toronto/" aria-label="Sagra di Toronto on Instagram">
