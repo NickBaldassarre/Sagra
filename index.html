@@ -178,6 +178,36 @@
     }
     .credit-line { display: block; }
     #friends + p { text-wrap: balance; }
+    .site-map {
+      display: block;
+      width: 84%;
+      max-width: 100%;
+      margin: clamp(2rem, 5cqw, 4.5rem) auto 0;
+    }
+    .site-map-crop {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1684 / 1630;
+      background: white;
+    }
+    /* Display only the map: x=280, y=70, width=1684, height=1630 in the 2244x2904 source. */
+    .site-map img {
+      display: block;
+      position: absolute;
+      width: 133.2542%;
+      max-width: none;
+      height: auto;
+      left: -16.6271%;
+      top: -4.2945%;
+    }
+    .site-map figcaption {
+      margin-top: 1.75rem;
+      font-size: 2.34cqw;
+      line-height: 1.32;
+      text-transform: uppercase;
+    }
+    .site-map ul { padding: 0; list-style: none; }
+    .site-map li + li { margin-top: 0.35em; }
     .instagram {
       display: grid;
       width: 3.5rem;
@@ -245,6 +275,8 @@
       .credits h2 { padding: 0.25rem 0.6rem; }
       .credits p { margin-top: 0.35rem; }
       .credit-line { display: inline; }
+      .site-map { width: 90%; }
+      .site-map figcaption { font-size: clamp(1rem, 2.6cqw, 1.25rem); }
     }
   </style>
 </head>
@@ -315,6 +347,19 @@
           <p><a href="https://www.albionneighbourhoodservices.ca">BGC ALBION</a> AND <a href="https://www.villacharities.com/">VILLA CHARITIES</a></p>
         </section>
       </footer>
+      <figure class="site-map">
+        <div class="site-map-crop">
+          <img src="assets/sagra-site-map.jpg" width="2244" height="2904" loading="lazy" decoding="async" alt="Site map for Sagra di Toronto at The Columbus Centre, beside the tennis courts, showing the walking route from Lawrence Ave and Dufferin St and the designated pay parking lots.">
+        </div>
+        <figcaption>
+          <ul>
+            <li>Wheelchair accessible</li>
+            <li>Limited pay parking available in the designated lots</li>
+            <li>No dogs / Pets allowed</li>
+            <li>Debit or credit cards only, no cash on site</li>
+          </ul>
+        </figcaption>
+      </figure>
       <a class="instagram" href="https://www.instagram.com/sagra_di_toronto/" aria-label="Sagra di Toronto on Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <rect x="2.5" y="2.5" width="19" height="19" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
